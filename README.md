@@ -13,6 +13,8 @@ Containerized Deployment of MLFlow Models with Databricks Integration
   - [Retrieving Databricks credentials](#retrieving-databricks-credentials)
   - [Configuration](#configuration)
   - [Run the Code](#run-the-code)
+    - [Prepare the Data](#prepare-the-data)
+    - [Prediction Endpoint](#prediction-endpoint)
   - [Test if gunicorn is working](#test-if-gunicorn-is-working)
 
 # Architecture
@@ -67,6 +69,12 @@ Clone this repo and run the following `docker-compose` command to bring up the `
 ```
 docker-compose up
 ```
+
+### Prepare the Data
+Convert a `pandas` dataframe to `json` with the `split` format
+
+### Prediction Endpoint
+Post a `POST` request to `localhost:5000/predict` with a `json` to predict on a data
 
 ## Test if gunicorn is working
 
