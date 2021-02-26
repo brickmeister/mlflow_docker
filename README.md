@@ -68,15 +68,15 @@ Clone this repo and run the following `docker-compose` command to bring up the `
 docker-compose up
 ```
 
-In a separate terminal, run the following command to test if the gunicorn server is up
-
 ## Test if gunicorn is working
+
+In a separate terminal, run the following command to test if the gunicorn server is up. ** Note there is some startup time to connect to the MLFlow registry, so it is suggested to wait a few minutes before attempting curl the rest endpoint.
 
 ```
 curl localhost:5000
 ```
 
-Expected result is
+Expected result is.
 ```
-{hello world}
+{"hello":"world"}
 ```
