@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  web-srv:
+    build: .
+    # image: ml_mlflow
+    ports:
+      - 5000:5000
+    # command: /bin/bash
+    command: gunicorn --bind=0.0.0.0:5000 --workers=5 app:app
+    # command: flask run -h 0.0.0.0 -p 5000 -debug 
+    env_file:
+      - config/web_srv.env
+    volumes:
+      - type: bind
+        source: ./app
+        target: /opt/app
+    working_dir: /opt/app
