@@ -74,7 +74,7 @@ docker-compose up
 Convert a `pandas` dataframe to `json` with the `split` format
 
 ### Prediction Endpoint
-Post a `POST` request to `localhost:5000/predict` with a `json` to predict on a data
+Post a `POST` request to `localhost:5000/predict` with a `json payload` to predict.
 
 ## Test if gunicorn is working
 
