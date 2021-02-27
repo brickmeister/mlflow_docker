@@ -71,7 +71,7 @@ docker-compose up
 ```
 
 ### Prepare the Data
-Convert a `pandas` dataframe to `json` with the `split` format
+Convert a `pandas` dataframe to `json` with the `records` format
 
 ### Prediction Endpoint
 Post a `POST` request to `localhost:5000/predict` with a `json payload` to predict.
